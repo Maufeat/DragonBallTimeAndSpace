@@ -1,0 +1,26 @@
+(Version numbers: http://semver.org/)
+
+
+1.0.2:
+Fixes:
+  - OS X: Asset Store packages still weren't getting the right child process
+    permissions, so now the executable permission is always added when
+    starting a browser in the Editor.
+
+
+1.0.1:
+Fixes:
+  - Rebuild package so ZFGameBrowser has the correct initial permissions
+    on OS X.
+  - Correctly build browser_assets runtime resource even if there is no
+    BrowserAssets directory.
+  - NewWindow demo explains how to unzip BrowserAssets like MainDemo.
+  - Demo explanation should no longer be replaced by an error on very
+    slow computers.
+  - Disabling and re-enabling a BrowserGUI GameObject should no longer
+    break automatic resizing.
+
+
+1.0.0:
+  Initial release
+

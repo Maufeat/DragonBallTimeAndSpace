@@ -1,0 +1,566 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sun_red
+  m_Shader: {fileID: 4800000, guid: da9b73df1064edc48a872613a99bb752, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: a2be98d20f648794c87dd0737946da7e, type: 3}
+          m_Scale: {x: 4, y: 2}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 711716276fc2ef540b0c09ff172b6381, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DecalTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _GradientMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 20fb3fab602c05c44a31867aee0cfe1d, type: 3}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SurfaceNormalMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _HeightMap
+        second:
+          m_Texture: {fileID: 2800000, guid: a01e51192e20ad542bf77849171a65d9, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SunsetMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DistMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 4595d6cbe9c9e37429b01e9450a01bcf, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Nebula
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Starmap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMap
+        second:
+          m_Texture: {fileID: 2800000, guid: bc640b81a2dd37844a707534a711f7e5, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ColorMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 33e7b6d7c38b25c4fb9ce86c15e647d6, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SurfaceDetail
+        second:
+          m_Texture: {fileID: 2800000, guid: a11cef6022af73c4784a47975f1a6cf8, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MagmaDetailMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normal
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_2
+        second:
+          m_Texture: {fileID: 2800000, guid: a2be98d20f648794c87dd0737946da7e, type: 3}
+          m_Scale: {x: 2, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DistMapA
+        second:
+          m_Texture: {fileID: 2800000, guid: 96e425e16578cca4abd023ce22c30fca, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DistMapB
+        second:
+          m_Texture: {fileID: 2800000, guid: 49fcf8e9beea765489372fa757917dd5, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FlowNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: 90a8dbb5ad4e5d3488848741438ff94f, type: 3}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_43
+        second:
+          m_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
+          m_Scale: {x: 40, y: 20}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Reflections
+        second:
+          m_Texture: {fileID: 8900000, guid: 68a613c75a2eac2448e0d6200c4c4efa, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RoughnessMap
+        second:
+          m_Texture: {fileID: 2800000, guid: e23d48a9c5f4e684e8c7145e17acee66, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecularMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MainTex1
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AORGBHeightA
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ConeFalloff
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Smoke
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _LightMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecularIBL
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: 0.7
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _Intensity
+        second: 2.16
+      data:
+        first:
+          name: _NormalHeight
+        second: 0
+      data:
+        first:
+          name: _HeightTile
+        second: 1
+      data:
+        first:
+          name: _InvFade
+        second: 1
+      data:
+        first:
+          name: _EmissionGain
+        second: 0.14285715
+      data:
+        first:
+          name: _SpecularPow
+        second: 0
+      data:
+        first:
+          name: _SpecularMult
+        second: 0
+      data:
+        first:
+          name: _FresnelPow
+        second: 0
+      data:
+        first:
+          name: _FresnelMult
+        second: 0
+      data:
+        first:
+          name: _StarsPower
+        second: 0
+      data:
+        first:
+          name: _NebulaSaturation
+        second: 0
+      data:
+        first:
+          name: _Offset
+        second: 0
+      data:
+        first:
+          name: _IceDetail
+        second: 0
+      data:
+        first:
+          name: _VertexTile
+        second: 2647.7
+      data:
+        first:
+          name: _VertexSpeed
+        second: 32.25
+      data:
+        first:
+          name: _VertexPower
+        second: 0.002
+      data:
+        first:
+          name: _VertexFalloff
+        second: 2.6
+      data:
+        first:
+          name: _AtmoFalloff
+        second: 4.68
+      data:
+        first:
+          name: _AtmoPower
+        second: 1
+      data:
+        first:
+          name: _Parallax
+        second: 0.02
+      data:
+        first:
+          name: _Roughness
+        second: 0.01
+      data:
+        first:
+          name: _3DCoordFalloff
+        second: 2.2
+      data:
+        first:
+          name: _3DCoordFlowTile
+        second: 64.99
+      data:
+        first:
+          name: _3DFlowNormalPower
+        second: 0.01
+      data:
+        first:
+          name: _3DPlasmaFlowSpeed
+        second: 0.31
+      data:
+        first:
+          name: _3DNormalFlowSpeed
+        second: 5.45
+      data:
+        first:
+          name: _node_11
+        second: 185.37
+      data:
+        first:
+          name: _node_11_copy
+        second: 1.25
+      data:
+        first:
+          name: _DistTile
+        second: 1
+      data:
+        first:
+          name: _node_64
+        second: 1.83
+      data:
+        first:
+          name: _SpecularPower
+        second: 1
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
+      data:
+        first:
+          name: _ConeStrength
+        second: 0.55
+      data:
+        first:
+          name: _SmokeScale
+        second: 0.5
+      data:
+        first:
+          name: _Divisions
+        second: 0.1353384
+      data:
+        first:
+          name: _Gloss
+        second: 0.4915418
+      data:
+        first:
+          name: _Specular
+        second: 0.13197637
+      data:
+        first:
+          name: _Amount
+        second: -0.035714284
+      data:
+        first:
+          name: _Bands
+        second: 8
+      data:
+        first:
+          name: _BulgeScale
+        second: 0.2
+      data:
+        first:
+          name: _BulgeShape
+        second: 5
+      data:
+        first:
+          name: _GlowIntensity
+        second: 1.2
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0.21323532, g: 0.14895114, b: 0.14895114, a: 1}
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _FresnelColor
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _DistFact
+        second: {r: 0.19, g: 0.03, b: 0.02, a: 0}
+      data:
+        first:
+          name: _StarsTint
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _NebulaTint
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _IceFactors
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _Cool
+        second: {r: 0.5073643, g: 0.073487334, b: 0, a: 0.29411766}
+      data:
+        first:
+          name: _Warm
+        second: {r: 0.99999994, g: 0.6389319, b: 0.25000602, a: 0.14509805}
+      data:
+        first:
+          name: _Hot
+        second: {r: 1, g: 0.40392157, b: 0, a: 0.101960786}
+      data:
+        first:
+          name: _Atmo
+        second: {r: 0.99999994, g: 0.4587557, b: 0.19853519, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _DiffuseColor
+        second: {r: 0.32352942, g: 0.21172146, b: 0.21172146, a: 1}
+      data:
+        first:
+          name: _MagmaColorA
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _MagmaColorB
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _LavaColorLow
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _LavaColorMid
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _LavaColorHigh
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      data:
+        first:
+          name: _DetailFactors
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _MagmaFactors
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _MagmaTiling
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _Tiling
+        second: {r: 3.81, g: 30.3, b: 3.56, a: 4}
+      data:
+        first:
+          name: _ColorA
+        second: {r: 1, g: 0.9558824, b: 0.9558824, a: 1}
+      data:
+        first:
+          name: _ColorB
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _SunColorLow
+        second: {r: 0.5000283, g: 0, b: 0, a: 0.03529412}
+      data:
+        first:
+          name: _SunColorHigh
+        second: {r: 0.99999994, g: 0.82606745, b: 0.63971055, a: 0.34509805}
+      data:
+        first:
+          name: _SunColorMed
+        second: {r: 0.9191176, g: 0.566794, b: 0.18923011, a: 0.39215687}
+      data:
+        first:
+          name: _ColorFact
+        second: {r: 0.92, g: 1, b: 6.41, a: 0}
+      data:
+        first:
+          name: _SunTint
+        second: {r: 1, g: 0.81135905, b: 0.7794118, a: 0}
+      data:
+        first:
+          name: _Coloqr
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _ConeColor
+        second: {r: 1, g: 1, b: 1, a: 0}
+      data:
+        first:
+          name: _GlowColor
+        second: {r: 1, g: 0.2391481, b: 0.1102941, a: 1}

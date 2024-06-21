@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b053f31488bb3c045b8f7eaf071d77e7, type: 3}
+  m_Name: 45725AFB-8D08-42B7-99C4-981B27B81B83
+  m_EditorClassIdentifier:
+  objectName: Loop_Event
+  id: 3227121838
+  guid: 45725AFB-8D08-42B7-99C4-981B27B81B83

@@ -1,0 +1,34 @@
+﻿using System;
+using ProtoBuf;
+
+namespace msg
+{
+    [ProtoContract(Name = "ERechargeReturnCode")]
+    public enum ERechargeReturnCode
+    {
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_SUCCESS", Value = 0)]
+        ERECHARGE_RETURN_CODE_SUCCESS,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_SERVICE_LOST", Value = 1)]
+        ERECHARGE_RETURN_CODE_SERVICE_LOST,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_ACCOUNT_NOT_FOUND", Value = 2)]
+        ERECHARGE_RETURN_CODE_ACCOUNT_NOT_FOUND,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_NOT_ENOUGH", Value = 3)]
+        ERECHARGE_RETURN_CODE_NOT_ENOUGH,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_CARD_NOT_FOUND", Value = 4)]
+        ERECHARGE_RETURN_CODE_CARD_NOT_FOUND,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_CARD_CAN_NOT_USER", Value = 5)]
+        ERECHARGE_RETURN_CODE_CARD_CAN_NOT_USER,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_CARD_CAN_USE_MULTY", Value = 6)]
+        ERECHARGE_RETURN_CODE_CARD_CAN_USE_MULTY,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_CARD_ERROR_NUMBER", Value = 7)]
+        ERECHARGE_RETURN_CODE_CARD_ERROR_NUMBER,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_CARD_ERROR_PSWD", Value = 8)]
+        ERECHARGE_RETURN_CODE_CARD_ERROR_PSWD,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_DATABASE_ERROR", Value = 9)]
+        ERECHARGE_RETURN_CODE_DATABASE_ERROR,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_IN_PROCESSING", Value = 10)]
+        ERECHARGE_RETURN_CODE_IN_PROCESSING,
+        [ProtoEnum(Name = "ERECHARGE_RETURN_CODE_UNKNOWN_ERROR", Value = 11)]
+        ERECHARGE_RETURN_CODE_UNKNOWN_ERROR
+    }
+}

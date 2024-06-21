@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biaoqing>
+<bq id="1" name="bq_aixin" ToolTip="#ax"/>
+<n a=" "/>
+<bq id="2" name="bq_aoman" ToolTip="#am"/>
+<n a=" "/>
+<bq id="3" name="bq_baiyan" ToolTip="#by"/>
+<n a=" "/>
+<bq id="4" name="bq_bianbian" ToolTip="#bb"/>
+<n a=" "/>
+<bq id="5" name="bq_bizui" ToolTip="#bz"/>
+<n a=" "/>
+<bq id="6" name="bq_chijing" ToolTip="#cj"/>
+<n a=" "/>
+<bq id="7" name="bq_dabing" ToolTip="#db"/>
+<n a=" "/>
+<bq id="8" name="bq_daku" ToolTip="#dk"/>
+<n a=" "/>
+<bq id="9" name="bq_deyi" ToolTip="#dy"/>
+<n a=" "/>
+<bq id="10" name="bq_diaoxie" ToolTip="#dx"/>
+
+
+<bq id="11" name="bq_e" ToolTip="#je"/>
+<n a=" "/>
+<bq id="12" name="bq_fadai" ToolTip="#fd"/>
+<n a=" "/>
+<bq id="13" name="bq_fanu" ToolTip="#fn"/>
+<n a=" "/>
+<bq id="14" name="bq_fendou" ToolTip="#jy"/>
+<n a=" "/>
+<bq id="15" name="bq_ganga" ToolTip="#gg"/>
+<n a=" "/>
+<bq id="16" name="bq_haixiu" ToolTip="#hx"/>
+<n a=" "/>
+<bq id="17" name="bq_hanxiao" ToolTip="#sx"/>
+<n a=" "/>
+<bq id="18" name="bq_jingkong" ToolTip="#jk"/>
+<n a=" "/>
+<bq id="19" name="bq_juezui" ToolTip="#jz"/>
+<n a=" "/>
+<bq id="20" name="bq_keai" ToolTip="#ka"/>
+
+
+<bq id="21" name="bq_ku" ToolTip="#sk"/>
+<n a=" "/>
+<bq id="22" name="bq_kun" ToolTip="#fk"/>
+<n a=" "/>
+<bq id="23" name="bq_liuhan" ToolTip="#lh"/>
+<n a=" "/>
+<bq id="24" name="bq_liulei" ToolTip="#ll"/>
+<n a=" "/>
+<bq id="25" name="bq_meigui" ToolTip="#mg"/>
+<n a=" "/>
+<bq id="26" name="bq_nanguo" ToolTip="#ng"/>
+<n a=" "/>
+<bq id="27" name="bq_qiang" ToolTip="#qd"/>
+<n a=" "/>
+<bq id="28" name="bq_qiaoda" ToolTip="#pd"/>
+<n a=" "/>
+<bq id="29" name="bq_ruo" ToolTip="#rx"/>
+<n a=" "/>
+<bq id="30" name="bq_se" ToolTip="#hs"/>
+
+
+<bq id="31" name="bq_shui" ToolTip="#dd"/>
+<n a=" "/>
+<bq id="32" name="bq_tiaopi" ToolTip="#tp"/>
+<n a=" "/>
+<bq id="33" name="bq_touxiao" ToolTip="#tx"/>
+<n a=" "/>
+<bq id="34" name="bq_tu" ToolTip="#ot"/>
+<n a=" "/>
+<bq id="35" name="bq_weixiao" ToolTip="#wx"/>
+<n a=" "/>
+<bq id="36" name="bq_wen" ToolTip="#fw"/>
+<n a=" "/>
+<bq id="37" name="bq_woshou" ToolTip="#ws"/>
+<n a=" "/>
+<bq id="38" name="bq_xinsui" ToolTip="#xsl"/>
+<n a=" "/>
+<bq id="39" name="bq_xu" ToolTip="#xu"/>
+<n a=" "/>
+<bq id="40" name="bq_yiwen" ToolTip="#yw"/>
+
+
+<bq id="41" name="bq_yun" ToolTip="#yd"/>
+<n a=" "/>
+<bq id="42" name="bq_zaijian" ToolTip="#zj"/>
+<n a=" "/>
+<bq id="43" name="bq_zhemo" ToolTip="#zm"/>
+<n a=" "/>
+<bq id="44" name="bq_zhouma" ToolTip="#mm"/>
+<n a=" "/>
+<bq id="45" name="bq_zhuakuang" ToolTip="#zk"/>
+<n a=" "/>
+<bq id="46" name="bq_ziya" ToolTip="#zy"/>
+<n a=" "/>
+</biaoqing>

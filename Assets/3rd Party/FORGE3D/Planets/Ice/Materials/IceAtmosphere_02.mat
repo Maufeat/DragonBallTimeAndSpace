@@ -1,0 +1,320 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: IceAtmosphere_02
+  m_Shader: {fileID: 4800000, guid: 8c929d2a17d536b4e856eb323a34aabd, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Clouds
+        second:
+          m_Texture: {fileID: 2800000, guid: b7b54f03a94cffe48bba9d978d8f3c59, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Scattering
+        second:
+          m_Texture: {fileID: 2800000, guid: e85c7b15423b01f43802d942f0d51b5e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Sunset
+        second:
+          m_Texture: {fileID: 2800000, guid: 67c65d775907b5a47bd87f9c4385014c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Offset
+        second: 0
+      data:
+        first:
+          name: _ScatteringOffset
+        second: -2.33999991
+      data:
+        first:
+          name: _ScatteringFactor
+        second: 1.88999999
+      data:
+        first:
+          name: _Intensity
+        second: 44.0999985
+      data:
+        first:
+          name: _InnterRingFactor
+        second: 1.28999996
+      data:
+        first:
+          name: _InnerRingOffset
+        second: -2.97000003
+      data:
+        first:
+          name: _OutterRingFactorA
+        second: .310000002
+      data:
+        first:
+          name: _OutterRingFactorB
+        second: 3.29999995
+      data:
+        first:
+          name: _OutterRingIntensity
+        second: 25.3799992
+      data:
+        first:
+          name: _Wrap
+        second: .889999986
+      data:
+        first:
+          name: _node_12908
+        second: 2.24000001
+      data:
+        first:
+          name: _node_12915
+        second: .300000012
+      data:
+        first:
+          name: _node_12923
+        second: 2
+      data:
+        first:
+          name: _node_12927
+        second: 0
+      data:
+        first:
+          name: _node_12938
+        second: 0
+      data:
+        first:
+          name: _Atmosphere
+        second: 11.8000002
+      data:
+        first:
+          name: _node_10925
+        second: .639999986
+      data:
+        first:
+          name: _node_10937
+        second: 1.76999998
+      data:
+        first:
+          name: _node_10912
+        second: 3.45000005
+      data:
+        first:
+          name: _node_10917
+        second: .209999993
+      data:
+        first:
+          name: _node_10886
+        second: 8.26000023
+      data:
+        first:
+          name: _node_10891
+        second: -.409999996
+      data:
+        first:
+          name: _ScatteringPow
+        second: 10.1999998
+      data:
+        first:
+          name: _LightFactor
+        second: 7.46999979
+      data:
+        first:
+          name: _ShadowCoverage
+        second: 3.125
+      data:
+        first:
+          name: _LightMult
+        second: 18.2142868
+      data:
+        first:
+          name: _ShadowFactor
+        second: 2.71428561
+      data:
+        first:
+          name: _CloudsFactor
+        second: 1.97000003
+      data:
+        first:
+          name: _node_10980
+        second: .569999993
+      data:
+        first:
+          name: _node_12242
+        second: 1.51999998
+      data:
+        first:
+          name: _node_12247
+        second: .0299999993
+      data:
+        first:
+          name: _node_12250
+        second: 1.63
+      data:
+        first:
+          name: _Shift
+        second: .49000001
+      data:
+        first:
+          name: _AtmospherePow
+        second: -2.76999998
+      data:
+        first:
+          name: _node_12376
+        second: 5
+      data:
+        first:
+          name: _node_12378
+        second: 5
+      data:
+        first:
+          name: _node_12384
+        second: 3.5999999
+      data:
+        first:
+          name: _node_12387
+        second: 16.9599991
+      data:
+        first:
+          name: _node_12389
+        second: -.529999971
+      data:
+        first:
+          name: _node_12594
+        second: 3.66000009
+      data:
+        first:
+          name: _node_12603
+        second: 1
+      data:
+        first:
+          name: _node_12608
+        second: -4.34000015
+      data:
+        first:
+          name: _node_12616
+        second: .25
+      data:
+        first:
+          name: _node_12620
+        second: 3
+      data:
+        first:
+          name: _LightPow
+        second: .0900000036
+      data:
+        first:
+          name: _node_12625
+        second: -.209999993
+      data:
+        first:
+          name: _node_12636
+        second: -.400000006
+      data:
+        first:
+          name: _node_12637
+        second: .00999999978
+      data:
+        first:
+          name: _ScatteringScale
+        second: -.219999999
+      data:
+        first:
+          name: _node_12652
+        second: 16160.9004
+      data:
+        first:
+          name: _node_12709
+        second: -.0199999996
+      data:
+        first:
+          name: _node_12866
+        second: 0
+      data:
+        first:
+          name: _node_12869
+        second: 0
+      data:
+        first:
+          name: _node_12874
+        second: 0
+      data:
+        first:
+          name: _node_12883
+        second: .769999981
+      data:
+        first:
+          name: _node_12885
+        second: 2.21000004
+      data:
+        first:
+          name: _node_12887
+        second: 1
+      data:
+        first:
+          name: _node_12889
+        second: 0
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .522092044, g: .703368723, b: .99999994, a: 1}
+      data:
+        first:
+          name: _InnerRingColor
+        second: {r: .340884477, g: .605383337, b: .713235259, a: 1}
+      data:
+        first:
+          name: _OutterRingColor
+        second: {r: 0, g: .58622092, b: .99999994, a: 1}
+      data:
+        first:
+          name: _node_10918
+        second: {r: 0, g: .66896534, b: 1, a: 1}
+      data:
+        first:
+          name: _InnerRangeColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _node_12598
+        second: {r: 0, g: .23635897, b: .433823526, a: 1}
+      data:
+        first:
+          name: _node_12630
+        second: {r: 0, g: 0, b: 5.21999979, a: 0}
+      data:
+        first:
+          name: _node_12632
+        second: {r: 0, g: 0, b: -.252000004, a: 0}
+      data:
+        first:
+          name: _node_12710
+        second: {r: 0, g: 0, b: .0149999997, a: 0}

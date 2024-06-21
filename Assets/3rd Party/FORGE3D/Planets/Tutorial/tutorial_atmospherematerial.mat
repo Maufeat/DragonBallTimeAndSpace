@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: tutorial_atmospherematerial
+  m_Shader: {fileID: 4800000, guid: 8c929d2a17d536b4e856eb323a34aabd, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Scattering
+        second:
+          m_Texture: {fileID: 2800000, guid: e85c7b15423b01f43802d942f0d51b5e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Offset
+        second: 0
+      data:
+        first:
+          name: _ScatteringOffset
+        second: -2.22000003
+      data:
+        first:
+          name: _ScatteringFactor
+        second: .699999988
+      data:
+        first:
+          name: _Intensity
+        second: 25.5
+      data:
+        first:
+          name: _InnterRingFactor
+        second: 2.76999998
+      data:
+        first:
+          name: _InnerRingOffset
+        second: -3.02999997
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .189770758, g: .527533591, b: .992647052, a: 1}
+      data:
+        first:
+          name: _InnerRingColor
+        second: {r: .0367646813, g: .720991552, b: 1, a: 1}

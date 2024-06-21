@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MainPlayer
+  - OtherPlayer
+  - Floor
+  - Wall
+  - Shadow
+  - Mask
+  - BasicUI
+  - FirstUI
+  - SecondUI
+  - DisAppear
+  - ThirdUI
+  - AnimTag
+  - Effect
+  - Cube
+  - KeepCollider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  -
+  - Water
+  - UI
+  -
+  -
+  - Charactor
+  - Terrian
+  - RT
+  - MainPlayer
+  - OtherPlayer
+  - NpcShadow
+  - NpcNoShadow
+  - Effect
+  - CutScene
+  - Wall
+  - CutSceneUI
+  - CameraEffect
+  - Fence
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name:
+    uniqueID: 1916635999
+    locked: 0

@@ -1,0 +1,318 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Moon_06_gamma
+  m_Shader: {fileID: 4800000, guid: b6c8b7ba200c06942b19950c78e1c391, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SunsetMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CloudsMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CloudsCapMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _GradientMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 20fb3fab602c05c44a31867aee0cfe1d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OceanMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _HeightMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 1f1c9042a909cf0428e474bee7a4b7a2, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SurfaceNormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 6cc482e511c42eb4884024bb2dfe1bad, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CityLightUVMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CityLightMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CityLightMaskMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 312d1944bed2cfe4eabc5f0df3c1c59a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ColorMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 09d2001b751e3a04d8777399d5915c4c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 83cd225ec6d870948907f7e59b3b9257, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 7c5a2011e8f01744fb51f3a42c11e299, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _CloudsBrightness
+        second: 0
+      data:
+        first:
+          name: _VegetationCoverage
+        second: 0
+      data:
+        first:
+          name: _DesertCoverage
+        second: 0
+      data:
+        first:
+          name: _WaterSpecularPow
+        second: 0
+      data:
+        first:
+          name: _VegetationFactors
+        second: 0
+      data:
+        first:
+          name: _ShoreFactor
+        second: 0
+      data:
+        first:
+          name: _NormalHeight
+        second: .479999989
+      data:
+        first:
+          name: _FresnelLandPow
+        second: .699999988
+      data:
+        first:
+          name: _CloudsAnimation
+        second: 0
+      data:
+        first:
+          name: _DiffusePow
+        second: .819999993
+      data:
+        first:
+          name: _HeightTile
+        second: 1
+      data:
+        first:
+          name: _DesertFactors
+        second: 0
+      data:
+        first:
+          name: _MountainCoverage
+        second: 0
+      data:
+        first:
+          name: _MountainFactors
+        second: 0
+      data:
+        first:
+          name: _WaterDetailPow
+        second: 0
+      data:
+        first:
+          name: _WaterDetailMult
+        second: 0
+      data:
+        first:
+          name: _WaterSpecularMult
+        second: 0
+      data:
+        first:
+          name: _WaterFresnelMult
+        second: 0
+      data:
+        first:
+          name: _FresnelLandMult
+        second: 1.44000006
+      data:
+        first:
+          name: _WaterFresnelPow
+        second: 0
+      data:
+        first:
+          name: _CloudsShadows
+        second: 0
+      data:
+        first:
+          name: _CloudsSunset
+        second: 1
+      data:
+        first:
+          name: _Population
+        second: 0
+      data:
+        first:
+          name: _ColorPassTrough
+        second: 1
+      data:
+        first:
+          name: _RampBias
+        second: .5
+      data:
+        first:
+          name: _Valleys
+        second: 1.09000003
+      data:
+        first:
+          name: _MedHills
+        second: 1
+      data:
+        first:
+          name: _HighHills
+        second: 1.88
+      data:
+        first:
+          name: _NormalBias
+        second: .239999995
+      data:
+        first:
+          name: _SpecTile
+        second: 1
+      data:
+        first:
+          name: _SpecLandPow
+        second: 1.48000002
+      data:
+        first:
+          name: _SpecLandMult
+        second: 1.34000003
+      data:
+        first:
+          name: _SpecWrap
+        second: 0
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _ShallowWaterColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _CloudsColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _CityLightColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _ShoreColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _VegetationColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _DesertColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _DeepWaterColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _MountainColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _WaterSpecularColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _LandSpecularColor
+        second: {r: .0462262034, g: .372828037, b: .41911763, a: 1}
+      data:
+        first:
+          name: _DetailFactors
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Ramp1Color
+        second: {r: .99999994, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Ramp2Color
+        second: {r: 0, g: 1, b: .751724243, a: 1}
+      data:
+        first:
+          name: _Ramp3Color
+        second: {r: 0, g: .751724005, b: 1, a: 1}
