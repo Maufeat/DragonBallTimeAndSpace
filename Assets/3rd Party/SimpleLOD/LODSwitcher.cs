@@ -63,10 +63,16 @@ public class LODSwitcher : MonoBehaviour
             centerOffset = bounds.center;
             frameInterval = 1;
         }
-        Camera cam = customCamera;
-        if (cam == null) cam = Camera.main;
-        Vector3 p0 = cam.ScreenToWorldPoint(new Vector3((Screen.width - 100f) / 2f, 0, 1f));
-        Vector3 p1 = cam.ScreenToWorldPoint(new Vector3((Screen.width + 100f) / 2f, 0, 1f));
+        if (customCamera == null)
+        {
+            customCamera = Camera.main;
+        }
+        if (customCamera == null)
+        {
+            return;
+        }
+        Vector3 p0 = customCamera.ScreenToWorldPoint(new Vector3((Screen.width - 100f) / 2f, 0, 1f));
+        Vector3 p1 = customCamera.ScreenToWorldPoint(new Vector3((Screen.width + 100f) / 2f, 0, 1f));
         pixelsPerMeter = 1f / (Vector3.Distance(p0, p1) / 100f);
     }
     public void SetCustomCamera(Camera aCamera)
@@ -157,9 +163,15 @@ public class LODSwitcher : MonoBehaviour
 
     public float ScreenPortion()
     {
-        Camera cam = customCamera;
-        if (cam == null) cam = Camera.main;
-        float distance = Vector3.Distance(cam.transform.position, transform.position + centerOffset);
+        if (customCamera == null)
+        {
+            customCamera = Camera.main;
+        }
+        if (customCamera == null)
+        {
+            return 0f;
+        }
+        float distance = Vector3.Distance(Camera.main.transform.position, transform.position + centerOffset);
         if (deactivateAtDistance > 0f && distance > deactivateAtDistance) return -1f;
         float pixelSize = objectSize * pixelsPerMeter;
         float screenPortion = pixelSize / distance / Screen.width;

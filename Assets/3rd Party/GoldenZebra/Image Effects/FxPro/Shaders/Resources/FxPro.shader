@@ -373,8 +373,6 @@
 					resColor = lerp( resColor, fogColor, fogAmount );
 					
 					#ifdef S_CURVE_ON
-					resColor = saturate(resColor);
-					
 					fixed3 adjColor = Overlay(resColor, resColor);
 
 					resColor = lerp(resColor, adjColor, _SCurveIntensity);

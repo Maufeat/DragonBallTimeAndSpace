@@ -1,201 +1,101 @@
-﻿#define FXPRO_EFFECT
-//#define BLOOMPRO_EFFECT
-
-#if FXPRO_EFFECT
-#define BLOOMPRO_EFFECT
-#endif
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿using System;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
-#if FXPRO_EFFECT
-namespace FxProNS {
-#elif BLOOMPRO_EFFECT
-namespace BloomProNS {
-#endif
-	[Serializable]
-	public class BloomHelperParams {
-	    public EffectsQuality Quality;
+namespace FxProNS
+{
+    // Token: 0x02000044 RID: 68
+    [Serializable]
+    public class BloomHelperParams
+    {
+        // Token: 0x040001A7 RID: 423
+        public EffectsQuality Quality;
 
-	    public Color BloomTint = Color.white;
-	
-	    [Range( 0f, .99f )]
-	    public float BloomThreshold = .8f;
-	
-	    [Range( 0f, 3f )]
-	    public float BloomIntensity = 1.5f;
-	
-	    [Range( 0.01f, 3f )]
-	    public float BloomSoftness = .5f;
-	}
-	
-	public class BloomHelper : Singleton<BloomHelper>, IDisposable
-	{
-        private static Material _mat;
+        // Token: 0x040001A8 RID: 424
+        [Range(0f, 1f)]
+        public float BloomThreshold = 0.25f;
 
+        // Token: 0x040001A9 RID: 425
+        [Range(0f, 2.5f)]
+        public float BloomIntensity = 0.75f;
+
+        // Token: 0x040001AA RID: 426
+        [Range(0.25f, 5.5f)]
+        public float BloomBlurSize = 1f;
+    }
+
+    public class BloomHelper : Singleton<BloomHelper>, IDisposable
+    {
+        // Token: 0x1700004A RID: 74
+        // (get) Token: 0x060001A0 RID: 416 RVA: 0x0005F340 File Offset: 0x0005D540
         public static Material Mat
         {
             get
             {
-                if (null == _mat)
-                    _mat = new Material( Shader.Find("Hidden/BloomPro") )  {
+                if (null == BloomHelper._mat)
+                {
+                    BloomHelper._mat = new Material(Shader.Find("Hidden/BloomPro"))
+                    {
                         hideFlags = HideFlags.HideAndDontSave
                     };
-
-                return _mat;
+                }
+                return BloomHelper._mat;
             }
         }
-	
-	    private BloomHelperParams p;
-	
-	    private int bloomSamples = 5;
-	
-	    private float bloomBlurRadius = 5f;
-	
-	    public void SetParams( BloomHelperParams _p ) {
-	        p = _p;
-	    }
-	
-	    public void Init() {
-	
-	        float realBloomIntensity = Mathf.Exp( p.BloomIntensity ) - 1f;
-	
-	        if (Application.platform == RuntimePlatform.IPhonePlayer)
-					p.BloomThreshold *= .75f;
 
-            Mat.SetFloat( "_BloomThreshold", p.BloomThreshold );
-            Mat.SetFloat( "_BloomIntensity", realBloomIntensity );
+        // Token: 0x060001A1 RID: 417 RVA: 0x00004355 File Offset: 0x00002555
+        public void SetParams(BloomHelperParams _p)
+        {
+            this.p = _p;
+        }
 
-            Mat.SetColor( "_BloomTint", p.BloomTint );
+        // Token: 0x060001A2 RID: 418 RVA: 0x0005F380 File Offset: 0x0005D580
+        public void Init()
+        {
+            if (this.p == null)
+            {
+                return;
+            }
+            BloomHelper.Mat.SetFloat("_BloomThreshold", this.p.BloomThreshold);
+            BloomHelper.Mat.SetFloat("_BloomIntensity", this.p.BloomIntensity);
+            RenderTextureManager.Instance.Dispose();
+        }
 
-//	        Debug.Log( p.BloomTint );
-	
-	        //Bloom samples settings
-	        if (p.Quality == EffectsQuality.High || p.Quality == EffectsQuality.Normal) {
-	            bloomSamples = 5;
-                Mat.EnableKeyword( "BLOOM_SAMPLES_5" );
-                Mat.DisableKeyword( "BLOOM_SAMPLES_3" );
-	        } if (p.Quality == EffectsQuality.Fast || p.Quality == EffectsQuality.Fastest) {
-	            bloomSamples = 3;
-                Mat.EnableKeyword( "BLOOM_SAMPLES_3" );
-                Mat.DisableKeyword( "BLOOM_SAMPLES_5" );
-	        }
-	
-	        //Blur radius settings
-	        if (p.Quality == EffectsQuality.High) {
-	            bloomBlurRadius = 10f;
-                Mat.EnableKeyword( "BLUR_RADIUS_10" );
-                Mat.DisableKeyword( "BLUR_RADIUS_5" );
-	        } else {
-	            bloomBlurRadius = 5f;
-                Mat.EnableKeyword( "BLUR_RADIUS_5" );
-                Mat.DisableKeyword( "BLUR_RADIUS_10" );
-	        }
-	
-	        float[] bloomTexFactors = CalculateBloomTexFactors( Mathf.Exp( p.BloomSoftness ) - 1f );
-	
-	        if (bloomTexFactors.Length == 5) {
-                Mat.SetVector( "_BloomTexFactors1",
-	                new Vector4( bloomTexFactors[0], bloomTexFactors[1], bloomTexFactors[2], bloomTexFactors[3] ) );
-                Mat.SetVector( "_BloomTexFactors2", new Vector4( bloomTexFactors[4], 0f, 0f, 0f ) );
-	        } else if (bloomTexFactors.Length == 3) {
-                Mat.SetVector(
-	                "_BloomTexFactors1",
-	                new Vector4( bloomTexFactors[0], bloomTexFactors[1], bloomTexFactors[2], 0f ) );
-	        } else {
-	            Debug.LogError( "Unsupported bloomTexFactors.Length: " + bloomTexFactors.Length );
-	        }
-	
-	        RenderTextureManager.Instance.Dispose();
-	    }
-	
-	    public void RenderBloomTexture( RenderTexture source, RenderTexture dest )
-	    {
-	        /*RenderTexture curRenderTex = RenderTextureManager.Instance.RequestRenderTexture( source.width, source.height, source.depth, source.format );
-	
-	        //Prepare by extracting blooming pixels
-            Graphics.Blit( source, curRenderTex, Mat, 0 );  //Is it ok to extract blooming pixels at 1/4 res??????
-	
-	        //Downsample & blur
-	        for (int i = 1; i <= bloomSamples; i++) {
-	            float curSpread = Mathf.Lerp( 1f, 2f, (float)(i - 1) / (float)(bloomSamples) );
-	
-				#if FXPRO_EFFECT
-	            RenderTextureManager.Instance.SafeAssign( ref curRenderTex, FxPro.DownsampleTex( curRenderTex, 2f ) );
-				#elif BLOOMPRO_EFFECT
-				RenderTextureManager.Instance.SafeAssign( ref curRenderTex, BloomPro.DownsampleTex( curRenderTex, 2f ) );
-				#elif DOFPRO_EFFECT
-				RenderTextureManager.Instance.SafeAssign( ref curRenderTex, DOFPro.DownsampleTex( curRenderTex, 2f ) );
-				#endif
-	
-	            RenderTextureManager.Instance.SafeAssign( ref curRenderTex, BlurTex( curRenderTex, curSpread ) );
-	
-	            //Set blurred bloom texture
-                Mat.SetTexture( "_DsTex" + i, curRenderTex );
-	        }
-	
-	        //Bloom composite pass
-            //Graphics.Blit( null, dest, Mat, 1 );
-	
-	        RenderTextureManager.Instance.ReleaseRenderTexture(curRenderTex);*/
-	    }
-	
-	
-	
-	    public RenderTexture BlurTex( RenderTexture _input, float _spread ) {
-	        //Blur
-	        float curBlurSize = _spread * 10f / bloomBlurRadius;     //Normalization - smaller blur = higher step
-	
-	        RenderTexture tempRenderTex1 = RenderTextureManager.Instance.RequestRenderTexture( _input.width, _input.height, _input.depth, _input.format );
-	        RenderTexture tempRenderTex2 = RenderTextureManager.Instance.RequestRenderTexture( _input.width, _input.height, _input.depth, _input.format );
-	
-	        //Horizontal blur
-            Mat.SetVector( "_SeparableBlurOffsets", new Vector4( 1f, 0f, 0f, 0f ) * curBlurSize );
-            //Graphics.Blit( _input, tempRenderTex1, Mat, 2 );
-	
-	        //Vertical blur
-            Mat.SetVector( "_SeparableBlurOffsets", new Vector4( 0f, 1f, 0f, 0f ) * curBlurSize );
-            //Graphics.Blit( tempRenderTex1, tempRenderTex2, Mat, 2 );
-	
-	        tempRenderTex1 = RenderTextureManager.Instance.ReleaseRenderTexture( tempRenderTex1 );
-	
-	        return tempRenderTex2;
-	    }
-	
-	    private float[] CalculateBloomTexFactors( float softness ) {
-	        var bloomTexFactors = new float[bloomSamples];
-	        for (int i = 0; i < bloomTexFactors.Length; i++) {
-	            float t = (float)(i) / (float)(bloomTexFactors.Length - 1);
-	
-	            bloomTexFactors[i] = Mathf.Lerp( 1f, softness, t );
-	        }
-	
-	        bloomTexFactors = MakeSumOne( bloomTexFactors );
-	
-	        return bloomTexFactors;
-	    }
-	
-	    private float[] MakeSumOne( IList<float> _in ) {
-	        float sum = _in.Sum();
-	
-	        var res = new float[_in.Count];
-	
-	        for (int i = 0; i < _in.Count; i++) {
-	            res[i] = _in[i] / sum;
-	        }
-	
-	        return res;
-	    }
-	
-	    public void Dispose() {
-            if ( null != Mat )
-                Object.DestroyImmediate( Mat );
-	
-	        RenderTextureManager.Instance.Dispose();
-	    }
-	}
+        // Token: 0x060001A3 RID: 419 RVA: 0x0005F3D8 File Offset: 0x0005D5D8
+        public void RenderBloomTexture(RenderTexture source, RenderTexture dest)
+        {
+            int num = ((this.p.Quality != EffectsQuality.Fast && this.p.Quality != EffectsQuality.Fastest) ? 2 : 4);
+            float num2 = ((this.p.Quality != EffectsQuality.Fast && this.p.Quality != EffectsQuality.Fastest) ? 1f : 0.5f);
+            BloomHelper.Mat.SetVector("_Parameter", new Vector4(this.p.BloomBlurSize * num2, 0f, this.p.BloomThreshold, this.p.BloomIntensity));
+            int num3 = source.width / num;
+            int num4 = source.height / num;
+            RenderTexture renderTexture = RenderTextureManager.Instance.RequestRenderTexture(num3, num4, 0, source.format);
+            RenderTexture renderTexture2 = RenderTextureManager.Instance.RequestRenderTexture(num3, num4, 0, source.format);
+            RenderTexture renderTexture3 = RenderTextureManager.Instance.RequestRenderTexture(num3, num4, 0, source.format);
+            Graphics.Blit(source, renderTexture, BloomHelper.Mat, 1);
+            BloomHelper.Mat.SetVector("_Parameter", new Vector4(this.p.BloomBlurSize * num2, 0f, this.p.BloomThreshold, this.p.BloomIntensity));
+            Graphics.Blit(renderTexture, renderTexture2, BloomHelper.Mat, 2);
+            Graphics.Blit(renderTexture2, renderTexture3, BloomHelper.Mat, 3);
+            BloomHelper.Mat.SetTexture("_Bloom", renderTexture3);
+            Graphics.Blit(source, dest, BloomHelper.Mat, 0);
+            RenderTextureManager.Instance.ReleaseRenderTexture(renderTexture);
+            RenderTextureManager.Instance.ReleaseRenderTexture(renderTexture2);
+            RenderTextureManager.Instance.ReleaseRenderTexture(renderTexture3);
+        }
+
+        // Token: 0x060001A4 RID: 420 RVA: 0x0000435E File Offset: 0x0000255E
+        public void Dispose()
+        {
+            if (null != BloomHelper.Mat)
+            {
+                global::UnityEngine.Object.DestroyImmediate(BloomHelper.Mat);
+            }
+            RenderTextureManager.Instance.Dispose();
+        }
+
+        // Token: 0x040001AB RID: 427
+        private static Material _mat;
+
+        // Token: 0x040001AC RID: 428
+        private BloomHelperParams p;
+    }
 }
